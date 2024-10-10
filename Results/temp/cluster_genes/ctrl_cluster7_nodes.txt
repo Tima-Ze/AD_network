@@ -6,17 +6,14 @@ MAT2B	protein_coding	ENSG00000038274	No_kegg	NA	NA	ctrl_cluster7
 PSMA4	protein_coding	ENSG00000041357	kegg	NA	NA	ctrl_cluster7
 DKK3	protein_coding	ENSG00000050165	No_kegg	NA	NA	ctrl_cluster7
 PITHD1	protein_coding	ENSG00000057757	No_kegg	NA	NA	ctrl_cluster7
-VPS35	protein_coding	ENSG00000069329	No_kegg	Apoptosis,intracellular trafficking	apoptotic mitochondrial changes,regulation of macroautophagy	ctrl_cluster7_nodes
 DNAJA2	protein_coding	ENSG00000069345	No_kegg	NA	NA	ctrl_cluster7
 CDC42	protein_coding	ENSG00000070831	No_kegg	NA	NA	ctrl_cluster7
 CHFR	protein_coding	ENSG00000072609	No_kegg	NA	NA	ctrl_cluster7
 ZNF586	protein_coding	ENSG00000083828	No_kegg	NA	NA	ctrl_cluster7
-RRN3	protein_coding	ENSG00000085721	No_kegg	NA	NA	ctrl_cluster7
 DDHD2	protein_coding	ENSG00000085788	No_kegg	NA	NA	ctrl_cluster7
 ATP6V1D	protein_coding	ENSG00000100554	No_kegg	intracellular trafficking	regulation of macroautophagy	ctrl_cluster7_nodes
 PGK1	protein_coding	ENSG00000102144	No_kegg	NA	NA	ctrl_cluster7
 WDR59	protein_coding	ENSG00000103091	No_kegg	NA	NA	ctrl_cluster7
-HSDL1	protein_coding	ENSG00000103160	No_kegg	NA	NA	ctrl_cluster7
 BPNT2	protein_coding	ENSG00000104331	No_kegg	NA	NA	ctrl_cluster7
 PRKAR1A	protein_coding	ENSG00000108946	No_kegg	NA	NA	ctrl_cluster7
 TMEM33	protein_coding	ENSG00000109133	No_kegg	NA	NA	ctrl_cluster7
@@ -27,7 +24,6 @@ PLEKHB2	protein_coding	ENSG00000115762	No_kegg	NA	NA	ctrl_cluster7
 KBTBD7	protein_coding	ENSG00000120696	No_kegg	NA	NA	ctrl_cluster7
 ARL1	protein_coding	ENSG00000120805	No_kegg	NA	NA	ctrl_cluster7
 FAM199X	protein_coding	ENSG00000123575	No_kegg	NA	NA	ctrl_cluster7
-ARMCX1	protein_coding	ENSG00000126947	No_kegg	NA	NA	ctrl_cluster7
 ATP6V1E1	protein_coding	ENSG00000131100	No_kegg	intracellular trafficking	regulation of macroautophagy	ctrl_cluster7_nodes
 PPT1	protein_coding	ENSG00000131238	No_kegg	NA	NA	ctrl_cluster7
 RLIM	protein_coding	ENSG00000131263	No_kegg	NA	NA	ctrl_cluster7
@@ -43,16 +39,12 @@ SSB	protein_coding	ENSG00000138385	No_kegg	NA	NA	ctrl_cluster7
 PARP16	protein_coding	ENSG00000138617	No_kegg	NA	NA	ctrl_cluster7
 GABARAPL1	protein_coding	ENSG00000139112	No_kegg	NA	NA	ctrl_cluster7
 WDR20	protein_coding	ENSG00000140153	No_kegg	NA	NA	ctrl_cluster7
-ACP1	protein_coding	ENSG00000143727	No_kegg	NA	NA	ctrl_cluster7
 ARL6IP5	protein_coding	ENSG00000144746	No_kegg	NA	NA	ctrl_cluster7
-EIF3M	protein_coding	ENSG00000149100	No_kegg	NA	NA	ctrl_cluster7
 ATP5F1A	protein_coding	ENSG00000152234	kegg	Mitochondrial energy production	aerobic respiration	ctrl_cluster7_nodes
 AZIN1	protein_coding	ENSG00000155096	No_kegg	NA	NA	ctrl_cluster7
 RAB39B	protein_coding	ENSG00000155961	No_kegg	NA	NA	ctrl_cluster7
-GPRASP2	protein_coding	ENSG00000158301	No_kegg	NA	NA	ctrl_cluster7
 RHBDL2	protein_coding	ENSG00000158315	No_kegg	NA	NA	ctrl_cluster7
 VMA21	protein_coding	ENSG00000160131	No_kegg	NA	NA	ctrl_cluster7
-PSMC2	protein_coding	ENSG00000161057	kegg	NA	NA	ctrl_cluster7
 PEX19	protein_coding	ENSG00000162735	No_kegg	NA	NA	ctrl_cluster7
 MEAF6	protein_coding	ENSG00000163875	No_kegg	NA	NA	ctrl_cluster7
 H2AZ1	protein_coding	ENSG00000164032	No_kegg	NA	NA	ctrl_cluster7
@@ -96,16 +88,14 @@ SLC16A1-AS1	lncRNA	ENSG00000226419	No_kegg	NA	NA	ctrl_cluster7
 	lncRNA	ENSG00000228302	No_kegg	NA	NA	ctrl_cluster7
 LRIG2-DT	lncRNA	ENSG00000238198	No_kegg	NA	NA	ctrl_cluster7
 NME1	protein_coding	ENSG00000239672	No_kegg	NA	NA	ctrl_cluster7
-RDH14	protein_coding	ENSG00000240857	No_kegg	NA	NA	ctrl_cluster7
 ATXN7L3B	protein_coding	ENSG00000253719	No_kegg	NA	NA	ctrl_cluster7
 OTUD6B-AS1	lncRNA	ENSG00000253738	No_kegg	NA	NA	ctrl_cluster7
 LASP1NB	protein_coding	ENSG00000263874	No_kegg	NA	NA	ctrl_cluster7
-	protein_coding	ENSG00000264058	No_kegg	NA	NA	ctrl_cluster7
 	protein_coding	ENSG00000268750	No_kegg	NA	NA	ctrl_cluster7
 ZNF587B	protein_coding	ENSG00000269343	No_kegg	NA	NA	ctrl_cluster7
 	lncRNA	ENSG00000271933	No_kegg	NA	NA	ctrl_cluster7
 	protein_coding	ENSG00000272772	No_kegg	NA	NA	ctrl_cluster7
 ZNHIT3	protein_coding	ENSG00000273611	No_kegg	NA	NA	ctrl_cluster7
-	protein_coding	ENSG00000280571	No_kegg	NA	NA	ctrl_cluster7
 EBLN3P	lncRNA	ENSG00000281649	No_kegg	NA	NA	ctrl_cluster7
 	lncRNA	ENSG00000285667	No_kegg	NA	NA	ctrl_cluster7
+VPS35	NA	NA	NA	Apoptosis,intracellular trafficking	apoptotic mitochondrial changes,regulation of macroautophagy	ctrl_cluster7_nodes

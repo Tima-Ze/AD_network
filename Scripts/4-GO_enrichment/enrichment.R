@@ -20,7 +20,7 @@ for (i in list.files(path = 'Results/clusters', pattern = '*nodes.csv', recursiv
   df <- left_join(df, nodes, by=c('ensembl_gene_id'='ENSEMBL'))%>%
     distinct(ensembl_gene_id, .keep_all=T) %>% 
     filter(gene_biotype%in%'protein_coding')
-  assign(sub('.csv','',basename(i)), df, envir = .GlobalEnv)
+  assign(sub('_nodes.csv','',basename(i)), df, envir = .GlobalEnv)
 }
 
 #As background gene, we will use the protein-coding genes from the inputted gene counts to construct the networks
