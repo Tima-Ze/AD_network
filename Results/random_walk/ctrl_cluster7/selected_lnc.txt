@@ -1,0 +1,5 @@
+ensembl_gene_id	Score	hgnc_symbol	gene_biotype	kegg	Cluster	GO
+ENSG00000228302	0.00348206454171514		lncRNA	No_kegg	ctrl_cluster7	Others
+ENSG00000228302	0.00155733552412812		lncRNA	No_kegg	ctrl_cluster7	Mitochondrial energy production
+ENSG00000271933	0.00319361256716792		lncRNA	No_kegg	ctrl_cluster7	intracellular trafficking
+ENSG00000226419	0.00331659679032912	SLC16A1-AS1	lncRNA	No_kegg	ctrl_cluster7	Apoptosis

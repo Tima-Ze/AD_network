@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
 
-#We want to add the cut-off of lncRNA annotation to the violin plot that we previousely made to show the RWR distribution 
+#We want to add the cut-off of lncRNA annotation to the violin plot that we previously made to show the RWR distribution 
 input <- 'Results/random_walk/'
 
 #Make a output directory

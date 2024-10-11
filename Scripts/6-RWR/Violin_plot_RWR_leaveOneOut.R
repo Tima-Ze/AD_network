@@ -5,7 +5,7 @@ library(dplyr)
 input <- 'Results/random_walk/leave_out/'
 
 #set a directory to save the output
-outdir <- 'Results/random_walk/plot/'
+outdir <- 'Results/random_walk/plot/leave_oneOut/'
 if(!dir.exists(file.path(outdir))){
   dir.create(file.path(outdir), recursive = T)
 }

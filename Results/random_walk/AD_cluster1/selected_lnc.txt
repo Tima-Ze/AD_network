@@ -1,0 +1,103 @@
+ensembl_gene_id	Score	hgnc_symbol	gene_biotype	kegg	Cluster	GO
+ENSG00000270751	0.000555568809966395	FBXW7-AS1	lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000231760	0.000593482845527558		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000254873	0.000600271145329879		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000260281	0.000604198052990015	ITFG1-AS1	lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000232959	0.000606552881276847	KIFAP3-AS1	lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000284697	0.000697845218435376		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000225792	0.000795292791788334	SNX10-AS1	lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000246283	0.000841677084311567	TTBK2-AS1	lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000233912	0.000883508830089841		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000259623	0.000894207378503804		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000287022	0.000918656884409438		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000254317	0.000935928983860554		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000230612	0.00101915943483814		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000285889	0.00103775181002512		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000258302	0.00123268838554285		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000285830	0.00131988391642567		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000248733	0.00134252971619025		lncRNA	No_kegg	AD_cluster1	Synapse signaling
+ENSG00000233912	0.000497821762273769		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000276012	0.0005057934406337		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000255422	0.000514720287040317		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000258048	0.000550450345195133	PPP1R12A-AS2	lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000248733	0.000840916287413086		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000232767	0.000853463952138485	HSPA12A-AS1	lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000287456	0.000971207065360082		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000258903	0.000980863846810684		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000231760	0.00100677516005465		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000260281	0.00102336123654437	ITFG1-AS1	lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000259623	0.00103521497980129		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000258302	0.00142953736468109		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000284697	0.00156369510124697		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000285830	0.00170784004852065		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000272770	0.00197488789731496		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000285889	0.00199257233652647		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000237633	0.00244372987803142		lncRNA	No_kegg	AD_cluster1	Others
+ENSG00000287022	0.000581804831568252		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000260391	0.00060729922267355		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000276012	0.00065997084171128		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000232959	0.000683701801685045	KIFAP3-AS1	lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000237633	0.000759440827292389		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000233912	0.000780764087122495		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000258903	0.000950348927746367		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000231760	0.000984445084247063		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000284697	0.00104994443830924		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000272770	0.00108239619289258		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000259623	0.00113817277069587		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000258302	0.00122391516484035		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000285830	0.00136975367899739		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000254317	0.00169031736693347		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000260281	0.00173527640216095	ITFG1-AS1	lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000285889	0.00224942528361873		lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000225792	0.00283985738207753	SNX10-AS1	lncRNA	No_kegg	AD_cluster1	Mitochondrial energy production
+ENSG00000225792	0.000335599490359188	SNX10-AS1	lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000254317	0.000355344726407077		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000246283	0.000544378823109711	TTBK2-AS1	lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000237481	0.000584804040115142		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000232767	0.000607093943778884	HSPA12A-AS1	lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000285889	0.000732890664210959		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000231760	0.000878004073435495		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000275854	0.000903716785599353		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000257434	0.00106369789815697		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000237633	0.00109005104759921		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000227617	0.00111441424022074	CERS6-AS1	lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000276012	0.0012200411865752		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000233912	0.00162068057545249		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000230612	0.00195357921108107		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000260281	0.00199319725050769	ITFG1-AS1	lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000272770	0.00230557275053249		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000248733	0.00412711034055433		lncRNA	No_kegg	AD_cluster1	intracellular trafficking
+ENSG00000259623	0.000513139273343341		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000237633	0.000515134000953101		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000287022	0.00051977663206064		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000284697	0.000534587753918002		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000257647	0.000556746166587944		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000275854	0.000559356491803353		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000257434	0.000603716022914796		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000272770	0.000950057477820914		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000276012	0.000971686942482093		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000225792	0.0010530396384611	SNX10-AS1	lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000258903	0.00143323316686074		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000254317	0.00151155915031111		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000233912	0.00158174629431344		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000231760	0.0022298236973943		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000285830	0.00240061941507006		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000260281	0.0025132008576162	ITFG1-AS1	lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000285889	0.00336480123161723		lncRNA	No_kegg	AD_cluster1	gene expression
+ENSG00000276012	0.000470735006210699		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000258048	0.000622197946146763	PPP1R12A-AS2	lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000258302	0.000679471552749268		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000287022	0.000726767619755007		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000287456	0.000738348069405004		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000254317	0.00075152627946488		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000272770	0.000755337598313283		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000233912	0.000767924242288071		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000260391	0.000858936132237117		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000237633	0.000859851557646259		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000260281	0.00109071325675417	ITFG1-AS1	lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000224746	0.00135573023764818		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000285889	0.00147506488498151		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000258903	0.00162855935249473		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000231760	0.00174222870262386		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000285830	0.00198656868138732		lncRNA	No_kegg	AD_cluster1	Apoptosis
+ENSG00000284697	0.00310687068244128		lncRNA	No_kegg	AD_cluster1	Apoptosis

@@ -4,7 +4,8 @@ library(ggplot2)
 # We want to show the distribution of lncRNAs' RWR scores for each GO category in each cluster by violin plot.
 
 #set a output directory
-outdir <- 'Results/random_walk/plot/'
+input <- 'Results/random_walk/'
+outdir <- 'Results/random_walk/plot/RWR/'
 if(!dir.exists(path=outdir)){
   dir.create(file.path(outdir), recursive = T)
 }
@@ -14,7 +15,7 @@ cluster=sub('.txt', '', list.files(path = 'Results/temp/net_clusters/', full.nam
 
 #Make violin plots for each cluster
 for (i in cluster) {
-  list=list.files(paste0(outdir, i), full.names = T, recursive = F, pattern = '.txt')
+  list=list.files(paste0(input, i), full.names = T, recursive = F, pattern = '.txt')
   list <- list[!grepl("selected_lnc\\.txt$", list)]
   all_scores <- lapply(list, function(file) {
     read.delim(file) %>% 
@@ -33,5 +34,5 @@ for (i in cluster) {
     scale_fill_brewer(palette = "Set3")+
     scale_y_continuous(name = "RWR scores", limits = c(min(plot$Score), max(plot$Score)))+
     facet_wrap(~group, scales = 'fixed', ncol = length(unique(plot$group)))
-  ggsave(plot=last_plot(), filename = paste0( outdir, i, '_scores.png'), bg = 'white')
+  ggsave(plot=last_plot(), filename = paste0( outdir, i, 'RWR_scores.png'), bg = 'white')
 }

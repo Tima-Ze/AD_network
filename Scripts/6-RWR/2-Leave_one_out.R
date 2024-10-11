@@ -37,7 +37,7 @@ foreach(i=cluster,
             mutate_at('GO_category', ~replace(., is.na(.), 'No enriched GO'))%>%
             tidyr::separate_longer_delim(GO_category, ',')
           #Run RWR per GO category
-          for(go in unique(node$GO_category)){
+          for(go in unique(node$GO_category)[!grepl("No enriched GO", unique(node$GO_category))]){
             SeedGene=node %>%
               filter(GO_category==go) %>% 
               pull(ensembl_gene_id)
@@ -51,17 +51,17 @@ foreach(i=cluster,
               RWR <- Random.Walk.Restart.Multiplex(AdjMatrixNorm,
                                                    net_MultiplexObject,SeedNodes)
               RWR <- RWR$RWRM_Results %>% 
-                rename(ensembl_gene_id=NodeNames)%>% 
+                dplyr::rename(ensembl_gene_id=NodeNames)%>% 
                 dplyr::filter(ensembl_gene_id==SeedGene[n])
               
               leaveOUT_df <- rbind(leaveOUT_df, RWR )
             }
             
-            if(!dir.exists(file.path(outdir))){
-              dir.create(file.path(outdir), recursive = T)
+            if(!dir.exists(file.path(output_dir))){
+              dir.create(file.path(output_dir), recursive = T)
             }
             
-            write.table(leaveOUT_df, paste0(outdir, i, '_', go, '_leaveOUT.txt'), quote = F, sep = '\t')
+            write.table(leaveOUT_df, paste0(output_dir, i, '_', go, '_leaveOUT.txt'), quote = F, sep = '\t')
             
           }
           

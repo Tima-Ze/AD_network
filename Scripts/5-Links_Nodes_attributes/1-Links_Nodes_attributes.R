@@ -13,7 +13,7 @@ library(stringr)
 ################################# Let's get started ###########################################
 
 ##Read GO enrichment results
-GO=read.csv('Results/GO/GO_enrichmetn.csv')
+GO=read.csv('Results/GO/GO_enrichment.csv')
 
 ################################# 1-Annotating GOs to clusters ################################
 #set a directory to save the output
