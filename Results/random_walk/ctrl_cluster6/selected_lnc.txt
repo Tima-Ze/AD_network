@@ -1,3 +1,0 @@
-ensembl_gene_id	Score	hgnc_symbol	gene_biotype	kegg	Cluster	GO
-ENSG00000253133	0.00190425485258607	GPAT4-AS1	lncRNA	No_kegg	ctrl_cluster6	gene expression
-ENSG00000260669	0.00482815577611129		lncRNA	No_kegg	ctrl_cluster6	gene expression
