@@ -2,7 +2,7 @@
 
 nextflow.enable.dsl=2  // Enable DSL 2 syntax
 
-process Calls_wTO {
+process wTO {
     // Output file
     output:
     file "wto_${task.name}.out"
@@ -22,5 +22,5 @@ process Calls_wTO {
 }
 
 workflow {
-    Calls_wTO()
+    wTO()
 }
