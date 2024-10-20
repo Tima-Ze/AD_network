@@ -8,6 +8,6 @@ The repository includes scripts for analyzing consensus networks. The **Data** f
 
 Scripts should be run in the specified order, as the output files from one script are used as input for the next. The scripts are intentionally kept simple and not fully automated, allowing users to follow the process step-by-step and verify the results at each stage.
 
+## **Network construction**
 
-
-
+The entire process for constructing wTO networks, filtering links with a cut-off, and integrating networks into consensus networks is embedded in a single Nextflow file. Due to the high computational demands, this script is designed to be executed on a SLURM cluster. You will need a Conda environment to run the script. For further instructions, please refer to the README file in the `network_construction` directory.
