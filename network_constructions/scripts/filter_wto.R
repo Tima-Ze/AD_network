@@ -13,6 +13,6 @@ if(!dir.exists(file.path(output_dir))) {
 for (i in paste0(file, '.txt')) {
   fread(paste0(input_dir, i), check.names = F, header = T) %>% 
     filter(abs(wTO)>=0.5) %>%
-    fwrite(., paste0(output_dir, gsub('1','',file),'.txt'), sep="\t", quote = F)
+    fwrite(., paste0(output_dir, file,'.txt'), sep="\t", quote = F)
   rm(i)
 }
