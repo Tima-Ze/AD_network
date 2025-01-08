@@ -6,10 +6,8 @@ output_dir="../Results/Raw_wTO/"
 args=(commandArgs(TRUE))
 N <- args[1]
 file <- args[2]
-save <- args[3]
 #Checkpoint
 print(N)
-print(save)
 print(file)
 
 ##This calls two functions that are modified wTO source Rscripts, which are modified to accelerate the process
@@ -20,7 +18,7 @@ input = read.delim(file) %>%
 
 wto = wTOFast_edit(Data = input, n = as.numeric(N))
 
-wto %>% fwrite(paste0(output_dir, save), sep = "\t", quote = F)
+wto %>% fwrite(paste0(output_dir, file), sep = "\t", quote = F)
 
-message(paste("Saved calculations to\n", save))
+message(paste("Saved calculations to\n", file))
 
