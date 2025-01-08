@@ -8,7 +8,7 @@ nextflow.enable.dsl=2  // Enable DSL 2 syntax
     path file from Channel.fromPath("Data/*")  // This automatically handles all files in Data directory
 
     // Output file
-    file "wto_${file.getBaseName()}.txt"
+    file "${file.getBaseName()}.txt"
 
     // Automatically publish outputs to the directory
     publishDir "Results/Raw_wTO", mode: 'move'
@@ -16,7 +16,7 @@ nextflow.enable.dsl=2  // Enable DSL 2 syntax
     script:
     """
     # Activate Conda environment
-    R CMD BATCH --vanilla "--args ${params.bootstrap} $file wto_${file.getBaseName()}.txt" Calls_wTO.R wto_${file.getBaseName()}.out
+    R CMD BATCH --vanilla "--args ${params.bootstrap} $file ${file.getBaseName()}.txt" Calls_wTO.R wto_${file.getBaseName()}.out
     """
 }
 
