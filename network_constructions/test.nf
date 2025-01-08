@@ -5,7 +5,7 @@ nextflow.enable.dsl=2  // Enable DSL 2 syntax
  process wTO {
     // Input files
     input:
-    path file from Channel.fromPath("Data/*")  // This automatically handles all files in Data directory
+    path file
 
     // Output file
     file "${file.getBaseName()}.txt"
@@ -16,7 +16,7 @@ nextflow.enable.dsl=2  // Enable DSL 2 syntax
     script:
     """
     # Activate Conda environment
-    R CMD BATCH --vanilla "--args ${params.bootstrap} $file ${file.getBaseName()}.txt" Calls_wTO.R wto_${file.getBaseName()}.out
+    R CMD BATCH --vanilla "--args ${params.bootstrap} ${file}" Calls_wTO.R wto_${file.getBaseName()}.out
     """
 }
 
@@ -59,8 +59,11 @@ process filter_wTO
     """
 }
 workflow {
-    input_channel = Channel.fromPath("Data/*")  // Define the input channel
+    def input_channel = Channel.fromPath('../Data/*')  // Define the input channel
     wTO(input_channel)  // Pass the input channel to the process
 
     RunCheckTopology1()
 }
+
+
+
