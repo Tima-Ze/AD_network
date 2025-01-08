@@ -1,6 +1,5 @@
 #!/usr/bin/env nextflow
 
-nextflow.enable.dsl=2  // Enable DSL 2 syntax
 
  process wTO {
     // Input files
@@ -8,15 +7,15 @@ nextflow.enable.dsl=2  // Enable DSL 2 syntax
     path file
 
     // Output file
-    file "${file.getBaseName()}.txt"
+    ???
 
     // Automatically publish outputs to the directory
     publishDir "Results/Raw_wTO", mode: 'move'
 
     script:
     """
-    # Activate Conda environment
-    R CMD BATCH --vanilla "--args ${params.bootstrap} ${file}" Calls_wTO.R wto_${file.getBaseName()}.out
+    Rscript ${workflow.projectDir}/scripts/Calls_wTO.R ${params.bootstrap} ${file}> ${file}_wto.out
+
     """
 }
 
@@ -59,7 +58,7 @@ process filter_wTO
     """
 }
 workflow {
-    def input_channel = Channel.fromPath('../Data/*')  // Define the input channel
+    def input_channel = Channel.fromPath('Data/*')  // Define the input channel
     wTO(input_channel)  // Pass the input channel to the process
 
     RunCheckTopology1()
