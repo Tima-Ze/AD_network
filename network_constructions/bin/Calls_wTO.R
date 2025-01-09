@@ -1,4 +1,5 @@
 require(data.table)
+library(dplyr)
 
 # Pass arguments including N (number of bootstrap), file (input file), and save (wTO network) to the script.
 args <- (commandArgs(TRUE))
