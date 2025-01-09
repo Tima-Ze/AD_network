@@ -2,6 +2,20 @@
 
 This repository contains a Nextflow workflow (main.nf), that includes all scripts (Rscripts) to construct the wTO networks, check the network topology in each step, filter the links of each network based on cutoff, and finally to integrate networks to make a Consensus networks.
 
+## Cloning the Repository and Setting Up
+
+First, clone the git repository to your local machine:
+
+```bash
+git clone https://github.com/Tima-Ze/AD_network.git
+```
+
+After cloning, make sure to make the scripts in the `bin` directory executable by running:
+
+```bash
+chmod +x bin/*
+```
+
 The workflow is configured to run on a **SLURM** cluster and uses a **Conda environment** for managing R dependencies. For the most smooth usage, create a Conda environment from the `R.yml` file by running the following command:
 
 ```bash
