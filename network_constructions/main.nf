@@ -8,8 +8,7 @@ process wTO {
     // Output files
     output:
     path "${file.baseName}.txt"  // Specify the output file to be captured
-   //  publishDir "${workflow.projectDir}/Results/Raw_wTO", mode: 'copy'
-
+    
     script:
     """
     Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir} > ${file.baseName}.out
