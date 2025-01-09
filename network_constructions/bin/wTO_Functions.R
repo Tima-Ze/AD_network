@@ -1,7 +1,7 @@
 library(tidyverse)
 library(Rcpp)
 
-sourceCpp("bin/wTO_correlation_snakemake.cpp")
+sourceCpp("bin/wTO_correlation.cpp")
 
 
 
