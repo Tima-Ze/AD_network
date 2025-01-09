@@ -1,29 +1,28 @@
 require(data.table)
 
-#Pass arguments including N (number of bootstrap), file (input file), and save (wTO network) to the script.
-args=(commandArgs(TRUE))
+# Pass arguments including N (number of bootstrap), file (input file), and save (wTO network) to the script.
+args <- (commandArgs(TRUE))
 N <- args[1]
 file <- args[2]
 wkdir <- args[3]
-#Check arguments
+# Check arguments
 print(N)
 print(file)
 
-#set the working directory
+# set the working directory
 setwd(wkdir)
 
-#set output directory
-output_dir="/Results/Raw_wTO/"
+# set output directory
+output_dir <- "/Results/Raw_wTO/"
 
-##This calls two functions that are modified wTO source Rscripts, which are modified to accelerate the process
-source("scripts/wTO_Functions_snakemake.R")
+## This calls two functions that are modified wTO source Rscripts, which are modified to accelerate the process
+source("bin/wTO_Functions.R")
 
-input = read.delim(file) %>%
+input <- read.delim(file) %>%
   as.data.frame()
 
-wto = wTOFast_edit(Data = input, n = as.numeric(N))
+wto <- wTOFast_edit(Data = input, n = as.numeric(N))
 
 wto %>% fwrite(paste0(output_dir, file), sep = "\t", quote = F)
 
 message(paste("Saved calculations to\n", file))
-
