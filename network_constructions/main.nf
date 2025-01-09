@@ -7,7 +7,8 @@ process wTO {
 
     // Output files
     output:
-    publishDir "${workflow.projectDir}/Results/Raw_wTO"
+    path "${file.baseName}.out"  // Specify the output file to be captured
+    publishDir "${workflow.projectDir}/Results/Raw_wTO", mode: 'copy'
 
     script:
     """
