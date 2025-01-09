@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 require(data.table)
 library(dplyr)
 
