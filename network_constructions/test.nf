@@ -1,20 +1,20 @@
 #!/usr/bin/env nextflow
 
-
  process wTO {
     // Input files
     input:
     path file
 
     // Output file
-    ???
+    output:
+    path publishDir "${workflow.projectDir}"/Results/Raw_wTO, mode: 'copy'
 
-    // Automatically publish outputs to the directory
-    publishDir "Results/Raw_wTO", mode: 'move'
+    // Automatically copy output from nextflow default temporary directory to the desired output directory
+    publishDir "${workflow.projectDir}/Results/Raw_wTO", mode: 'copy', overwrite: false
 
     script:
     """
-    Rscript ${workflow.projectDir}/scripts/Calls_wTO.R ${params.bootstrap} ${file}> ${file}_wto.out
+    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file}_wto.out
 
     """
 }
