@@ -7,7 +7,7 @@ process wTO {
 
     // Output files
     output:
-    publishDir "${workflow.projectDir}/Results/Raw_wTO", mode: 'copy'
+    publishDir "${workflow.projectDir}/Results/Raw_wTO"
 
     script:
     """
