@@ -16,7 +16,7 @@ print(file)
 setwd(wkdir)
 
 # set output directory
-output_dir <- "/Results/Raw_wTO/"
+output_dir <- "Results/Raw_wTO/"
 
 ## This calls two functions that are modified wTO source Rscripts, which are modified to accelerate the process
 source("bin/wTO_Functions.R")
