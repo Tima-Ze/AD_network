@@ -18,7 +18,7 @@ output_dir <- "/Results/Raw_wTO/"
 ## This calls two functions that are modified wTO source Rscripts, which are modified to accelerate the process
 source("bin/wTO_Functions.R")
 
-input <- read.delim(file) %>%
+input <- read.delim(paste0("Data/", file)) %>%
   as.data.frame()
 
 wto <- wTOFast_edit(Data = input, n = as.numeric(N))
