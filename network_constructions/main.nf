@@ -6,19 +6,16 @@
     path file
 
     // Output file
-    ???
-
-    // Automatically publish outputs to the directory
-    publishDir "Results/Raw_wTO", mode: 'move'
+    output:
+    path publishDir "${workflow.projectDir}"/Results/Raw_wTO/, mode: 'copy'
 
     script:
     """
-    Rscript ${workflow.projectDir}/scripts/Calls_wTO.R ${params.bootstrap} ${file}> ${file}_wto.out
+    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file}_wto.out
 
     """
 }
-
 workflow {
     def input_channel = Channel.fromPath('Data/*')  // Define the input channel
-    wTO(input_channel)  // Pass the input channel to the process
-}
+    wTO(input_channel)  // Pass the input channel to the proces
+    }

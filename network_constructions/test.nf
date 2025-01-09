@@ -7,10 +7,7 @@
 
     // Output file
     output:
-    path publishDir "${workflow.projectDir}"/Results/Raw_wTO, mode: 'copy'
-
-    // Automatically copy output from nextflow default temporary directory to the desired output directory
-    publishDir "${workflow.projectDir}/Results/Raw_wTO", mode: 'copy', overwrite: false
+    path publishDir "${workflow.projectDir}"/Results/Raw_wTO/, mode: 'copy'
 
     script:
     """
