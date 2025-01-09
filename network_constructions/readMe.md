@@ -79,3 +79,7 @@ You may customize the following parameters for the wTO process according to your
 ├── Calls_wTO.R                # The R script that will be executed
 └── README.md                  # This README file
 ```
+
+## Running the Nextflow Workflow
+
+nextflow run -c nextflow.config main.nf
