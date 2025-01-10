@@ -1,16 +1,19 @@
 #!/usr/bin/env nextflow
 
+// Define parameters
+params.output_dir = 'results/raw_wTO/'
+
 process wTO {
     input:
     path file
 
     output:
 
-    publishDir "${workflow.projectDir}/results/raw_wTO", mode: 'copy'
+     path "${file.baseName}.out"
 
     script:
     """
-    Calls_wTO.R ${params.bootstrap} data/${file} ${workflow.projectDir} > ${file.baseName}.out
+    Calls_wTO.R ${params.bootstrap} data/${file} ${params.output_dir} ${workflow.projectDir} > ${file.baseName}.out
     """
 }
 
@@ -18,6 +21,7 @@ workflow {
     def input_channel = Channel.fromPath('data/*')  // Define the input channel
     wTO(input_channel)  // Pass the input channel to the process
 }
+
 
 // Process 2: Check the topology of the wTO networks
 process RunCheckTopology1 {
