@@ -68,6 +68,7 @@ You may customize the following parameters for the wTO process according to your
 
 - Ensure your input data (gene expression data) is placed in the `Data` directory. The tables should be formatted with samples in columns and genes in rows, with gene names specified in the row names.
 - The wTO networks constructed from each input will be stored in the `Results/Raw_wTO` directory.
+- The process (1) wTO calculates the co-expression correlations by these parameters, `method='p'` (pearson coefficient), `sign='sign'`, and `delta=0.2`. For more details please refer to wTO R package [tutorial] (https://deisygysi.github.io/rpackages/wto/). You are able to determin the number of bootstrap through `nextflow.config` file.
 
 ## Directory Structure
 
