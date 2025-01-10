@@ -19,7 +19,7 @@
 
 workflow{
     main:
-    wTO_net = wTO('/data/*')
+    wTO_net = wTO("${workflow.projectDir}"/data/)
 
     publish:
     wTO_net >> 'raw_wTO'
