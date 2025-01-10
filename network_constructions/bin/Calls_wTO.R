@@ -22,6 +22,6 @@ input <- read.delim(file) %>%
 
 wto <- wTOFast_edit(Data = input, n = as.numeric(N))
 
-wto %>% fwrite(paste0(output_dir, file), sep = "\t", quote = F)
+wto %>% fwrite(paste0(output_dir, basename(file)), sep = "\t", quote = F)
 
 message(paste("Saved calculations to\n", basename(file)))
