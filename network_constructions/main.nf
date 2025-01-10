@@ -2,14 +2,11 @@
 
 // Process 2: make wTO networks
  process wTO {
-    // Input files
     input:
     path file
-
-    // Output file
     output:
     publishDir "${workflow.projectDir}"/results/raw_wTO/, mode: 'copy'
-
+    
     script:
     """
     Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file.baseName}.out
