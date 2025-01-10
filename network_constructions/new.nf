@@ -8,11 +8,11 @@
 
     // Output file
     output:
-    path  'results/raw_wTO/${file.basename}.txt'
+    path  'results/raw_wTO/${file.baseName}.txt'
 
     script:
     """
-    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file.basename}.out
+    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file.baseName}.out
 
     """
 }
