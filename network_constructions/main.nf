@@ -8,7 +8,7 @@
 
     // Output file
     output:
-    path publishDir "${workflow.projectDir}"/results/raw_wTO/, mode: 'copy'
+    publishDir "${workflow.projectDir}"/results/raw_wTO/, mode: 'copy'
 
     script:
     """
