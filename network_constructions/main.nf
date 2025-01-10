@@ -5,13 +5,12 @@ process wTO {
     path file
 
     output:
-    path "${file.baseName}.out"
 
     publishDir "${workflow.projectDir}/results/raw_wTO", mode: 'copy'
 
     script:
     """
-    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir} > ${file.baseName}.out
+    Calls_wTO.R ${params.bootstrap} /data/${file} ${workflow.projectDir} > ${file.baseName}.out
     """
 }
 
