@@ -15,7 +15,7 @@
     Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file.baseName}.out
 
     """
-}
+ }
 
 workflow {
     def input_channel = Channel.fromPath('data/*')  // Define the input channel
