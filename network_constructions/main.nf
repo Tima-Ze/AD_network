@@ -9,7 +9,7 @@ process wTO {
 
     output:
 
-     path "${params.output_dir}${file}"
+     path "${file.baseName}.out"
 
     script:
     """
