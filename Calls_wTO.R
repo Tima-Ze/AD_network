@@ -17,16 +17,16 @@ print(file)
 setwd(wkdir)
 
 # set output directory
-# output_dir <- "results/raw_wTO/"
+output_dir <- "Results/Raw_wTO/"
 
 ## This calls two functions that are modified wTO source Rscripts, which are modified to accelerate the process
 source("bin/wTO_Functions.R")
 
-input <- read.delim(file) %>%
+input <- read.delim(paste0("Data/", file)) %>%
   as.data.frame()
 
 wto <- wTOFast_edit(Data = input, n = as.numeric(N))
 
-wto %>% fwrite(paste0(basename(file), ".txt"), sep = "\t", quote = F)
+wto %>% fwrite(paste0(output_dir, file), sep = "\t", quote = F)
 
-message(paste("Saved calculations to\n", basename(file)))
+message(paste("Saved calculations to\n", file))
