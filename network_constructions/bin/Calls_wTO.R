@@ -15,7 +15,7 @@ print(file)
 
 # set the working directory
 setwd(wkdir)
-
+getwd()
 # set output directory
 # output_dir <- "results/raw_wTO/"
 

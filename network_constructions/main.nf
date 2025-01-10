@@ -10,7 +10,7 @@ process wTO {
 
     script:
     """
-    Calls_wTO.R ${params.bootstrap} /data/${file} ${workflow.projectDir} > ${file.baseName}.out
+    Calls_wTO.R ${params.bootstrap} data/${file} ${workflow.projectDir} > ${file.baseName}.out
     """
 }
 
