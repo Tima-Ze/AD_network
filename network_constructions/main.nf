@@ -1,16 +1,19 @@
 #!/usr/bin/env nextflow
 
+// Define parameters
+params.output_dir = 'results/raw_wTO/'
+
 process wTO {
     input:
     path file
 
     output:
 
-    publishDir "${workflow.projectDir}/results/raw_wTO", mode: 'copy'
+     path "${params.output_dir}${file}"
 
     script:
     """
-    Calls_wTO.R ${params.bootstrap} data/${file} ${workflow.projectDir} > ${file.baseName}.out
+    Calls_wTO.R ${params.bootstrap} data/${file} ${params.output_dir} ${workflow.projectDir} > ${file.baseName}.out
     """
 }
 
