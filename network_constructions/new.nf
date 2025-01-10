@@ -17,7 +17,7 @@
     """
 }
 
-workflow{
+workflow {
     main:
     wTO_net = wTO("${workflow.projectDir}"/data/)
 
