@@ -12,7 +12,7 @@
 
     script:
     """
-    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file}_wto.out
+    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file.baseName}.out
 
     """
 }

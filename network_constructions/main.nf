@@ -1,22 +1,23 @@
 #!/usr/bin/env nextflow
 
 // Process 2: make wTO networks
-process wTO {
+ process wTO {
     // Input files
     input:
     path file
 
-    // Output files
+    // Output file
     output:
-    path "${file.baseName}.txt"  // Specify the output file to be captured
+    path publishDir "${workflow.projectDir}"/results/raw_wTO/, mode: 'copy'
 
     script:
     """
-    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir} > ${file.baseName}.out
+    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file.baseName}.out
+
     """
 }
 
 workflow {
-    def input_channel = Channel.fromPath('Data/*')  // Define the input channel
+    def input_channel = Channel.fromPath('data/*')  // Define the input channel
     wTO(input_channel)  // Pass the input channel to the process
 }
