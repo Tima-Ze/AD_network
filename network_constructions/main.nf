@@ -1,5 +1,6 @@
 #!/usr/bin/env nextflow
 
+// Process 2: make wTO networks
 process wTO {
     // Input files
     input:
@@ -8,7 +9,7 @@ process wTO {
     // Output files
     output:
     path "${file.baseName}.txt"  // Specify the output file to be captured
-    
+
     script:
     """
     Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir} > ${file.baseName}.out

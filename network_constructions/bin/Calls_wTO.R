@@ -8,6 +8,7 @@ args <- (commandArgs(TRUE))
 N <- args[1]
 file <- args[2]
 wkdir <- args[3]
+
 # Check arguments
 print(N)
 print(file)

@@ -1,5 +1,6 @@
 #!/usr/bin/env nextflow
 
+// Process 2: make wTO networks
  process wTO {
     // Input files
     input:
@@ -20,9 +21,9 @@
 // Process 2: Check the topology of the wTO networks
 process RunCheckTopology1 {
     input:
-    path Results/Raw_wTO  // Input file to be processed
+    path Results/Raw_wTO
     output:
-    path Results/CheckTopology/topology_wTO.txt  // Output of the first R script
+    path Results/CheckTopology/topology_wTO.txt
     // Automatically publish outputs to the directory
     publishDir "Results/CheckTopology/", mode: 'move'
 
