@@ -11,7 +11,7 @@ process wTO {
 
     output:
 
-     path "${file}" into wto_raw_channel
+     path "${file}"
 
     script:
     """
@@ -23,10 +23,10 @@ process wTO {
 process filter_wTO
 {
     input: //files from outpot process wTO
-    path file from wto_raw_channel
+    path file
 
     output:
-    path ${file} into wto_filter_channel
+    path "${file}"
 
     script:
     """
@@ -36,6 +36,7 @@ process filter_wTO
 
 workflow {
     def input_channel = Channel.fromPath('data/*')  // Define the input channel
+    def(wto_raw_channel) = channel.fromPath(params.output_raw)
     wTO(input_channel)  // Pass the input channel to the process
     filter_wTO(wto_raw_channel)
 }
