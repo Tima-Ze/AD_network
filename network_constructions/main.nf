@@ -29,13 +29,13 @@ process filter_wTO {
 
     script:
     """
-    filter_wTO.R ${params.output_raw.file} ${params.output_filter} ${workflow.projectDir}
+    filter_wto.R ${params.output_raw}${file} ${params.output_filter} ${workflow.projectDir}
     """
 }
 
 workflow {
     def input_channel = Channel.fromPath('data/*')  // Define the input channel
-    def(wto_raw_channel) = channel.fromPath(params.output_raw)
+    def wto_raw_channel = Channel.fromPath("${params.output_raw}*")
     wTO(input_channel)  // Pass the input channel to the process
     filter_wTO(wto_raw_channel)
 }

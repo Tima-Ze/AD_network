@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 require(data.table)
 library(dplyr, quietly = T)
 
@@ -20,5 +22,6 @@ if (!dir.exists(file.path(output_dir))) {
 
 # filter links with abs(wTO) >= 0.5
 read.delim(file, check.names = F, header = T) %>%
+  as.data.frame() %>%
   dplyr::filter(abs(wTO) >= 0.5) %>%
   fwrite(paste0(output_dir, basename(file)), sep = "\t", quote = F)
