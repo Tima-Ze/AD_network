@@ -14,6 +14,11 @@ wkdir <- args[4]
 setwd(wkdir)
 getwd()
 
+# make output directory if it doesn't exist
+if (!dir.exists(file.path(output_dir))) {
+  dir.create(file.path(output_dir), recursive = TRUE)
+}
+
 ## This calls two functions that are modified wTO source Rscripts, which are modified to accelerate the process
 source("bin/wTO_Functions.R")
 

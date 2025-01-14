@@ -3,13 +3,14 @@
 // Define parameters
 params.output_dir = 'results/raw_wTO/'
 
+//calculate wTO networks
 process wTO {
     input:
     path file
 
     output:
 
-     path "${file.baseName}.out"
+     path "${file}"
 
     script:
     """
@@ -43,6 +44,7 @@ process RunCheckTopology1 {
     """
 }
 
+//subset links with absulute value of wTO >= 0.5
 process filter_wTO
 {
     input: //files from outpot process wTO

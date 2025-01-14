@@ -1,18 +1,24 @@
 require(data.table)
 library(dplyr, quietly = T)
 
-args=(commandArgs(TRUE))
+
+args <- (commandArgs(TRUE))
 file <- args[1]
-input_dir=args[2]
-output_dir=args[3]
-print(c(file, input_dir, output_dir))
+output_dir <- args[2]
+wkdir <- args[3]
 
-if(!dir.exists(file.path(output_dir))) {
-  dir.create(file.path(output_dir),recursive = TRUE)}
+# set the working directory
+setwd(wkdir)
+getwd()
+# check arguments
+print(c(file, output_dir))
 
-for (i in paste0(file, '.txt')) {
-  fread(paste0(input_dir, i), check.names = F, header = T) %>% 
-    filter(abs(wTO)>=0.5) %>%
-    fwrite(., paste0(output_dir, file,'.txt'), sep="\t", quote = F)
-  rm(i)
+# make output directory if it doesn't exist
+if (!dir.exists(file.path(output_dir))) {
+  dir.create(file.path(output_dir), recursive = TRUE)
 }
+
+# filter links with abs(wTO) >= 0.5
+read.delim(file, check.names = F, header = T) %>%
+  dplyr::filter(abs(wTO) >= 0.5) %>%
+  fwrite(paste0(output_dir, basename(file)), sep = "\t", quote = F)
