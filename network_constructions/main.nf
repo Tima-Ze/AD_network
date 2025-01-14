@@ -11,7 +11,7 @@ process wTO {
 
     output:
 
-     path "${file}"
+     path "${file.baseName}.out"
 
     script:
     """
