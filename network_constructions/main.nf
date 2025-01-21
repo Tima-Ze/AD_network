@@ -3,6 +3,7 @@
 // Define parameters
 params.output_raw = 'results/raw_wTO/'
 params.output_filter = 'results/filter_wTO/'
+params.output_cns = 'results/cns/'
 
 //calculate wTO networks
 process wTO {
@@ -15,7 +16,7 @@ process wTO {
 
     script:
     """
-    Calls_wTO.R ${params.bootstrap} data/${file} ${params.output_raw} ${workflow.projectDir} > ${file.baseName}.out
+    calls_wTO.R ${params.bootstrap} data/${file} ${params.output_raw} ${workflow.projectDir} > ${file.baseName}.out
     """
 }
 
@@ -33,9 +34,25 @@ process filter_wTO {
     """
 }
 
+// create consensus networks from filtered wTO networks (treat and control)
+process cns {
+    input: //filtered wtO files
+    path file
+
+    output:
+    path "${file}"
+
+    script:
+    """
+    cns_function.R ${params.output_filter} ${params.output_cns} ${workflow.projectDir}
+    """
+}
+
 workflow {
     def input_channel = Channel.fromPath('data/*')  // Define the input channel
     def wto_raw_channel = Channel.fromPath("${params.output_raw}*")
+    def wto_filter_channel = Channel.fromPath("${params.output_filter}*")
     wTO(input_channel)  // Pass the input channel to the process
     filter_wTO(wto_raw_channel)
+    cns(wto_filter_channel)
 }

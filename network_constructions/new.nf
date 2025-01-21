@@ -1,26 +1,42 @@
 #!/usr/bin/env nextflow
 
-// Process 2: make wTO networks
- process wTO {
-    // Input files
+// Define parameters
+params.output_raw = 'results/raw_wTO/'
+params.output_filter = 'results/filter_wTO/'
+params.output_filter = 'results/cns/'
+
+//calculate wTO networks
+process wTO {
     input:
     path file
 
-    // Output file
     output:
-    path  'results/raw_wTO/${file.baseName}.txt'
+
+     path "${file.baseName}.out"
 
     script:
     """
-    Calls_wTO.R ${params.bootstrap} ${file} ${workflow.projectDir}> ${file.baseName}.out
+    Calls_wTO.R ${params.bootstrap} data/${file} ${params.output_raw} ${workflow.projectDir} > ${file.baseName}.out
+    """
+}
 
+//subset links with absulute value of wTO >= 0.5
+process filter_wTO {
+    input: //files from outpot process wTO
+    path file
+
+    output:
+    path "${file}"
+
+    script:
+    """
+    filter_wto.R ${params.output_raw}${file} ${params.output_filter} ${workflow.projectDir}
     """
 }
 
 workflow {
-    main:
-    wTO_net = wTO("${workflow.projectDir}"/data/)
-
-    publish:
-    wTO_net >> 'raw_wTO'
+    def input_channel = Channel.fromPath('data/*')  // Define the input channel
+    def wto_raw_channel = Channel.fromPath("${params.output_raw}*")
+    wTO(input_channel)  // Pass the input channel to the process
+    filter_wTO(wto_raw_channel)
 }
