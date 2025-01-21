@@ -12,7 +12,7 @@ wkdir <- args[3]
 
 # set the working directory
 setwd(wkdir)
-getwd()
+print(getwd())
 
 # make output directory if it doesn't exist
 if (!dir.exists(file.path(output_dir))) {
