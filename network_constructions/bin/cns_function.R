@@ -3,7 +3,6 @@
 library(dplyr)
 library(data.table)
 library(igraph)
-source('bin/cns_weight_function.R')
 
 # Pass arguments 
 args <- (commandArgs(TRUE))
@@ -28,6 +27,7 @@ for (i in dir(input_dir, pattern = '.txt', full.names = T)) {
   rm(i)
 }
 
+source("bin/cns_weight_function.R")
 
 #treat_Consensus
 intersection(treat1, treat2) %>%
