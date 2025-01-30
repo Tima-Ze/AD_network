@@ -1,6 +1,6 @@
 # AD_network
 
-This repository contains all the scripts used to generate gene co-expression networks and perform downstream analyses linked to [paper title and DOI]. Please note that the embedded data provided here is a sample dataset.
+This repository contains all the scripts used to generate gene co-expression networks and perform downstream analyses linked to [Integrative Gene Co-expression Network Analysis Reveals Protein-Coding and lncRNA Genes Associated with Alzheimer’s Disease Pathology](https://www.biorxiv.org/content/10.1101/2025.01.19.633755v1). Please note that the embedded data provided here is a sample dataset.
 
 Please follow this order to use the scripts:
 
